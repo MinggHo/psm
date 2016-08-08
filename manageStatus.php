@@ -11,7 +11,7 @@ if(!isset($_SESSION['MM_Username'])){
 <title>Student Lecturer Appointment</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Gretong Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+<meta name="keywords" content="Gretong Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- Bootstrap Core CSS -->
@@ -19,15 +19,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- Custom CSS -->
 <link href="css/style.css" rel='stylesheet' type='text/css' />
 <!-- Graph CSS -->
-<link href="css/font-awesome.css" rel="stylesheet"> 
+<link href="css/font-awesome.css" rel="stylesheet">
 <!-- jQuery -->
 <link href='//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'/>
 <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <!-- lined-icons -->
 <link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
-<script src="js/amcharts.js"></script>	
-<script src="js/serial.js"></script>	
-<script src="js/light.js"></script>	
+<script src="js/amcharts.js"></script>
+<script src="js/serial.js"></script>
+<script src="js/light.js"></script>
 <!-- //lined-icons -->
 <script src="js/jquery-1.10.2.min.js"></script>
    <!--pie-chart--->
@@ -65,11 +65,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 }
             });
 
-           
+
         });
 
     </script>
-</head> 
+</head>
 <body>
    <div class="page-container">
    <!--/content-inner-->
@@ -79,7 +79,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="header-section">
 			<!-- top_bg -->
 						<div class="top_bg">
-							
+
 								<div class="header_top">
 								<div class="top_left">
 										<div class="log">
@@ -88,13 +88,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 								<div class="clearfix"> </div>
 								</div>
-							
+
 						</div>
 					<div class="clearfix"></div>
 				<!-- /top_bg -->
 				</div>
 				<div class="header_bg">
-						
+
 							<div class="header">
 								<div class="head-t">
 									<div class="logo">
@@ -103,10 +103,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="clearfix"> </div>
 							</div>
 						</div>
-					
+
 				</div>
 					<!-- //header-ends -->
-				
+
 				<!--content-->
 			<div class="content">
 					<div class="monthly-grid">
@@ -115,7 +115,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							  Lecturer Page - Manage Status
 							  <br>
 							  <br>
-							  
+
 							  <font color="black">
 							 <table border ="1px" width="100%">
 
@@ -128,7 +128,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								            <th>Delete</th>
 								          </tr>
 								        <?php
-								            mysql_connect("localhost" , "root" , "") or die (mysql_error());
+								            mysql_connect("localhost" , "root" , "root") or die (mysql_error());
 								            mysql_select_db("slas") or die ("Cannot connect to database");
 								            $query = mysql_query ("Select stat_id , day , date , status from status where lect_id='".$_SESSION['MM_Username']."'  ");
 								            while($row = mysql_fetch_array($query))
@@ -153,7 +153,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								    			{
 								    				location.href="updStatus.php?stat_id=" + id;
 								    			}
-								    			
+
 								    		}
 
 								    		function myFunction_2(id)
@@ -168,18 +168,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</div>
 							<div class="panel-body">
 								<!-- status -->
-								<div class="contain">	
+								<div class="contain">
 									<div class="gantt"></div>
 								</div>
 								<!-- status -->
 							</div>
 						</div>
 					</div>
-			
-						<!--//area-->					
+
+						<!--//area-->
 		<div class="fo-top-di">
 			<div class="foot-top">
-				
+
 					<div class="col-md-6 s-c">
 						<li>
 							<div class="fooll">
@@ -190,7 +190,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="social-ic">
 								<ul>
 									<li><a href="https://www.facebook.com/groups/ftmkroom/"><i class="facebok"> </i></a></li>
-										<div class="clearfix"></div>	
+										<div class="clearfix"></div>
 								</ul>
 							</div>
 						</li>
@@ -201,10 +201,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 					</div>
 					<div class="clearfix"> </div>
-				
+
 			</div>
 			<div class="footer">
-					
+
 					<div class="col-md-2 abt">
 						<h4>Locate FTMK</h4>
 						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d712.9232886392891!2d102.31874714794212!3d2.3082501355805936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d1e46a143881ad%3A0x8c8068611b844a80!2sFakulti+Teknologi+Maklumat+dan+Komunikasi+(FTMK)%2C+UTeM!5e0!3m2!1sen!2smy!4v1461644725290" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -220,7 +220,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<!--/sidebar-menu-->
 				<div class="sidebar-menu">
 					<header class="logo1">
-						<a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a> 
+						<a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a>
 					</header>
 						<div style="border-top:1px ridge rgba(255, 255, 255, 0.15)"></div>
                            <div class="menu">
@@ -231,7 +231,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										   <li id="menu-academico-avaliacoes" ><a href="appRej.php">Approve/Reject App</a></li>
 										  </ul>
 										</li>
-										 
+
 							        <li id="menu-academico" ><a href="#"><i class="lnr lnr-layers"></i> <span>Status Info Page</span> <span class="fa fa-angle-right" style="float: right"></span></a>
 										 <ul id="menu-academico-sub" >
 											<li id="menu-academico-avaliacoes" ><a href="addStatus.php">Add</a></li>
@@ -247,12 +247,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								  </ul>
 								</div>
 							  </div>
-							  <div class="clearfix"></div>		
+							  <div class="clearfix"></div>
 							</div>
 							<script>
 							var toggle = true;
-										
-							$(".sidebar-icon").click(function() {                
+
+							$(".sidebar-icon").click(function() {
 							  if (toggle)
 							  {
 								$(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
@@ -265,7 +265,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								  $("#menu span").css({"position":"relative"});
 								}, 400);
 							  }
-											
+
 											toggle = !toggle;
 										});
 							</script>
@@ -380,7 +380,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					values: [{
 						from: "/Date(1320192000000)/",
 						to: "/Date(1322401600000)/",
-						label: "Requirement Gathering", 
+						label: "Requirement Gathering",
 						customClass: "ganttRed"
 					}]
 				},{
@@ -389,7 +389,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					values: [{
 						from: "/Date(1322611200000)/",
 						to: "/Date(1323302400000)/",
-						label: "Scoping", 
+						label: "Scoping",
 						customClass: "ganttRed"
 					}]
 				},{
@@ -398,7 +398,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					values: [{
 						from: "/Date(1323802400000)/",
 						to: "/Date(1325685200000)/",
-						label: "Development", 
+						label: "Development",
 						customClass: "ganttGreen"
 					}]
 				},{
@@ -407,7 +407,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					values: [{
 						from: "/Date(1325685200000)/",
 						to: "/Date(1325695200000)/",
-						label: "Showcasing", 
+						label: "Showcasing",
 						customClass: "ganttBlue"
 					}]
 				},{
@@ -416,7 +416,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					values: [{
 						from: "/Date(1326785200000)/",
 						to: "/Date(1325785200000)/",
-						label: "Development", 
+						label: "Development",
 						customClass: "ganttGreen"
 					}]
 				},{
@@ -425,7 +425,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					values: [{
 						from: "/Date(1328785200000)/",
 						to: "/Date(1328905200000)/",
-						label: "Showcasing", 
+						label: "Showcasing",
 						customClass: "ganttBlue"
 					}]
 				},{
@@ -434,7 +434,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					values: [{
 						from: "/Date(1330011200000)/",
 						to: "/Date(1336611200000)/",
-						label: "Training", 
+						label: "Training",
 						customClass: "ganttOrange"
 					}]
 				},{
@@ -443,7 +443,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					values: [{
 						from: "/Date(1336611200000)/",
 						to: "/Date(1338711200000)/",
-						label: "Deployment", 
+						label: "Deployment",
 						customClass: "ganttOrange"
 					}]
 				},{
@@ -452,7 +452,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					values: [{
 						from: "/Date(1336611200000)/",
 						to: "/Date(1349711200000)/",
-						label: "Warranty Period", 
+						label: "Warranty Period",
 						customClass: "ganttOrange"
 					}]
 				}],

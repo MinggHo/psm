@@ -6,14 +6,6 @@ if (!isset($_SESSION['MM_UserGroup']) && ($_SESSION['MM_Username']) ) {
 }
 ?>
 <?php
-mysql_connect('localhost','root','root');
-mysql_select_db('slas');
-$s = $_SESSION['MM_Username'];
-if(isset ($_SESSION['MM_Username']))
-{
-	$sql ="Select b.book_id, s.name, b.description, b.status, b.subject, b.date, b.time, b.lecturer, l.username from student s, booking b, lecturer l  where b.lecturer=l.name and l.username ='{$s}' and b.username=s.username";
-	$result = mysql_query($sql);
-}
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -35,50 +27,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <!-- lined-icons -->
 <link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
-<script src="js/amcharts.js"></script>
-<script src="js/serial.js"></script>
-<script src="js/light.js"></script>
-<!-- //lined-icons -->
 <script src="js/jquery-1.10.2.min.js"></script>
-   <!--pie-chart--->
 <script src="js/pie-chart.js" type="text/javascript"></script>
- <script type="text/javascript">
-
-        $(document).ready(function () {
-            $('#demo-pie-1').pieChart({
-                barColor: '#3bb2d0',
-                trackColor: '#eee',
-                lineCap: 'round',
-                lineWidth: 8,
-                onStep: function (from, to, percent) {
-                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
-                }
-            });
-
-            $('#demo-pie-2').pieChart({
-                barColor: '#fbb03b',
-                trackColor: '#eee',
-                lineCap: 'butt',
-                lineWidth: 8,
-                onStep: function (from, to, percent) {
-                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
-                }
-            });
-
-            $('#demo-pie-3').pieChart({
-                barColor: '#ed6498',
-                trackColor: '#eee',
-                lineCap: 'square',
-                lineWidth: 8,
-                onStep: function (from, to, percent) {
-                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
-                }
-            });
-
-
-        });
-
-    </script>
 </head>
 <body>
    <div class="page-container">
@@ -121,100 +71,72 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="content">
 					<div class="monthly-grid">
 						<div class="panel panel-widget">
-							<div class="panel-title">
-							  Lecturer Page - Approve/Reject Appointment
-							  <br>
-								<div class="bs-example4" data-example-id="contextual-table">
-									<font color="black">
-						<table class="table table-responsive">
-						  <thead>
-							<tr>
-							  <th style="width:15px;">No.</th>
-							  <th>Student Name</th>
-							  <th>Subject</th>
-							  <th>Date</th>
-							  <th>Time</th>
-							  <th>Description</th>
-							  <th>Status</th>
-							  <th>Approve/Reject</th>
-							</tr>
-						  </thead>
-						  <tbody>
-						  </font>
-							<?php
-					$no = 1;
-					while($row = mysql_fetch_object($result))
-					{
-            $date = new DateTime();
-            $date->modify($row->date);
-        		$nextDate = $date->format('d/m/y');
-            ?>
-					<tr>
-						<td><?php echo $no; ?></td>
-						<td><?php echo $row->name ?></td>
-						<td><?php echo $row->subject ?></td>
-						<td><?php echo $nextDate ?></td>
-						<td><?php echo $row->time ?></td>
-						<td><?php echo $row->description ?></td>
-						<td><?php echo $row->status ?></td>
-						<!-- <td><a href="approval.php?book_id=<?php echo $row->book_id?>"><img src="images/1449950325_approve.png" width="66" height="68" /></a></td> -->
-            <td><a id = "approve" href = "approval.php?book_id=<?php echo $row->book_id?>&state=Approve" class="btn btn-sm btn-success" title="Approve"><i class="fa fa-music"></i></a>
-            <a id = "reject" href = "approval.php?book_id=<?php echo $row->book_id?>&state=Reject" class="btn btn-sm btn-danger" title="Reject"><i class="fa fa-bell-o"></i></a></td>
-					<?php
-					$no++;
-                    }
-                    ?>
-						  </tbody>
-						</table>
-					   </div>
-
-							</div>
+							<div class="panel-title">Add Date
+              <hr></div>
 							<div class="panel-body">
-								<!-- status -->
+                <form action="" method="post">
+                <div class="col-xs-6">
+                  <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" class="form-control input" id="subject" name="subject" placeholder="Enter subject">
+                  </div>
+                  <div class="form-group">
+                  <label>Description</label>
+                  <textarea class="form-control" rows="3" name="description" placeholder="Enter ..."></textarea>
+                </div>
+                </div>
+                  <div class="col-xs-6">
+                    <div class="col-xs-6">
+                      <div class="form-group">
+                        <label for="subject">Date</label>
+                        <input type="date" class="form-control input" id="date" name="date" placeholder="Enter subject">
+                      </div>
+                    </div>
+                    <div class="col-xs-5">
+                      <div class="form-group">
+                        <label>Time</label>
+                        <select class="form-control">
+                          <option value="8">08:00</option>
+                          <option value="10">10:00</option>
+                          <option value="12">12:00</option>
+                          <option value="14">14:00</option>
+                          <option value="16">16:00</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-xs-12">
+
+                      <div class="form-group">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox">
+                            Unavailable all week [ <span id="curWeek"></span> ]
+                          </label>
+                        </div>
+
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox">
+                            Checkbox 2
+                          </label>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="pull-right">
+                      <button class="btn btn-primary" type="submit" name="submit" value="submit">submit</button>
+                    </div>
+                  </div>
+                  </form>
 								<div class="contain">
-									<div class="gantt"></div>
 								</div>
 								<!-- status -->
 							</div>
 						</div>
 					</div>
 
-						<!--//area-->
-		<div class="fo-top-di">
-			<div class="foot-top">
-
-					<div class="col-md-6 s-c">
-						<li>
-							<div class="fooll">
-								<h1>follow us on</h1>
-							</div>
-						</li>
-						<li>
-							<div class="social-ic">
-								<ul>
-									<li><a href="https://www.facebook.com/groups/ftmkroom/"><i class="facebok"> </i></a></li>
-										<div class="clearfix"></div>
-								</ul>
-							</div>
-						</li>
-							<div class="clearfix"> </div>
-					</div>
-					<div class="col-md-6 s-c">
-						<div class="stay">
-						</div>
-					</div>
-					<div class="clearfix"> </div>
-
-			</div>
-			<div class="footer">
-
-					<div class="col-md-2 abt">
-						<h4>Locate FTMK</h4>
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d712.9232886392891!2d102.31874714794212!3d2.3082501355805936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d1e46a143881ad%3A0x8c8068611b844a80!2sFakulti+Teknologi+Maklumat+dan+Komunikasi+(FTMK)%2C+UTeM!5e0!3m2!1sen!2smy!4v1461644725290" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-					</div>
-					<div class="clearfix"> </div>
-			</div>
-		</div>
 			</div>
 			<!--content-->
 		</div>
@@ -276,20 +198,50 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="js/jquery.nicescroll.js"></script>
 <script src="js/scripts.js"></script>
 <!-- Bootstrap Core JavaScript -->
-   <script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
    <!-- /Bootstrap Core JavaScript -->
-   <!-- real-time -->
 <script language="javascript" type="text/javascript" src="js/jquery.flot.js"></script>
 	<script>
 
 	$(function() {
-    // $("#approve").click(function() {
-    //   alert('approve');
-    // });
-    //
-    // $("#reject").click(function() {
-    //   alert('reject');
-    // });
+    Date.prototype.getNextWeekMonday = function() {
+        var d = new Date(this.getTime());
+        var diff = d.getDate() - d.getDay() + 1;
+        if (d.getDay() == 0)
+            diff -= 7;
+        diff += 7; // ugly hack to get next monday instead of current one
+        return new Date(d.setDate(diff));
+    };
+
+
+    Date.prototype.getNextWeekTuesday = function() {
+        var d = this.getNextWeekMonday();
+        return new Date(d.setDate(d.getDate() + 1));
+    };
+
+    Date.prototype.getNextWeekWednesday = function() {
+        var d = this.getNextWeekMonday();
+        return new Date(d.setDate(d.getDate() + 2));
+    };
+
+    Date.prototype.getNextWeekThursday = function() {
+        var d = this.getNextWeekMonday();
+        return new Date(d.setDate(d.getDate() + 3));
+    };
+
+    Date.prototype.getNextWeekFriday = function() {
+        var d = this.getNextWeekMonday();
+        return new Date(d.setDate(d.getDate() + 4));
+    };
+
+
+    var latest_date = new Date();
+
+    // Get latest date on table
+    var curWeek = document.getElementById('curWeek');
+
+    curWeek.innerHTML = String(latest_date.getNextWeekMonday()).slice(0, 10) + " - " + String(latest_date.getNextWeekFriday()).slice(0, 10);
+
   });
 
 	</script>

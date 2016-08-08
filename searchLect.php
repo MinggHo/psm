@@ -25,7 +25,7 @@ if ($_POST) {
 		mysql_connect("localhost" , "root" , "root") or die (mysql_error());
 		mysql_select_db("slas") or die ("Cannot connect to database");
 
-		$sql = "SELECT name, department
+		$sql = "SELECT name, department, lect_id
 		FROM lecturer";
 
 		$results = mysql_query($sql);
@@ -466,7 +466,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						echo '<tr>';
 						echo '<td>' . $row['name'] . '</td>';
 						echo '<td>' . $row['department'] . '</td>';
-						echo '<td><a href="book_lect.php?lecturer='.$row['name'].'"><i class="fa fa-calendar" title="Book"></i></a></td>';
+						echo '<td>
+						<a class="btn btn-primary btn-sm" href="book_lect.php?lecturer='.$row['name'].'"><span class="fa fa-calendar" title="Book"></span></a>';
+						echo '<button onclick="status('. $row['lect_id'].')" class="btn btn-warning btn-sm" data-user="'. $row['lect_id'] .'"><span class="fa fa-inbox" title="Status"></span></button>
+						</td>';
 						echo '</tr>';
 					} ?>
         </tbody>
@@ -720,8 +723,29 @@ window.onload = function() {
 	} else {
 		// alert("Select lecturer to book");
 	}
+
+
 }
 
+
+// Lect status
+function status(x) {
+	console.log(x);
+	var id = x;
+	$.ajax({
+			type: "POST",
+			url: "getstatus.php",
+			dataType: "text",
+			data: {
+				id : id
+			},
+			success: function(response) {
+				alert(response);
+			}
+	});
+	// alert(status);
+	// console.log(status);
+}
 var table = document.getElementById("tableID");
 if (table != null) {
     for (var i = 0; i < table.rows.length; i++) {
