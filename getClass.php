@@ -5,9 +5,9 @@ session_start();
 $lecturer_name = $_POST['lecturer_name'];
 $conn = mysqli_connect("localhost" , "root" , "root", "slas");
 
-$sql = "SELECT lecturer, date, DAYNAME(date) as Hari , time FROM booking WHERE date BETWEEN CURDATE() AND CURDATE() + INTERVAL 10 DAY
-        AND lecturer = '$lecturer_name'
-        AND status = 'Approve'";
+$sql = "SELECT lecturer, time, classDay AS Hari
+FROM booking
+WHERE lecturer = '$lecturer_name' AND status = 'Class'";
 
 $results = $conn->query($sql);
 

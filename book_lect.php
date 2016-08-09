@@ -39,7 +39,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <script src="js/jquery-1.10.2.min.js"></script>
         <style>
             .blacked {
-                background: rgba(97, 104, 106, 0.67);
+                background: rgba(199, 133, 143, 0.73);
+                color: white;
+            }
+
+            .classed {
+                background: rgba(133, 184, 199, 0.73);
                 color: white;
             }
         </style>
@@ -123,7 +128,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                             <label for="desc">Description:</label>
                                             <input type="text" class="form-control" name="desc" id="desc" required>
                                         </div>
-                                        <button type="submit" id="ajxSubmit" class="btn btn-primary">Submit</button>
+                                        <button type="button" id="ajxSubmit" class="btn btn-primary">Submit</button>
                                     </form>
 
                                 </div>
@@ -366,27 +371,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         if (objt >= 8 && objt < 10) {
                                             var Monday0810 = document.getElementById('Monday0810');
                                             Monday0810.classList.add("blacked");
-                                            Monday0810.innerHTML = "Booked";
+                                            Monday0810.innerHTML = "BUSY";
                                         }
                                         if (objt >= 10 && objt < 12) {
                                             var Monday1012 = document.getElementById('Monday1012');
                                             Monday1012.classList.add("blacked");
-                                            Monday1012.innerHTML = "Booked";
+                                            Monday1012.innerHTML = "BUSY";
                                         }
                                         if (objt >= 12 && objt < 14) {
                                             var Monday1214 = document.getElementById('Monday1214');
                                             Monday1214.classList.add("blacked");
-                                            Monday1214.innerHTML = "Booked";
+                                            Monday1214.innerHTML = "BUSY";
                                         }
                                         if (objt >= 14 && objt < 16) {
                                             var Monday1416 = document.getElementById('Monday1416');
                                             Monday1416.classList.add("blacked");
-                                            Monday1416.innerHTML = "Booked";
+                                            Monday1416.innerHTML = "BUSY";
                                         }
                                         if (objt >= 16 && objt < 18) {
                                             var Monday1618 = document.getElementById('Monday1618');
                                             Monday1618.classList.add("blacked");
-                                            Monday1618.innerHTML = "Booked";
+                                            Monday1618.innerHTML = "BUSY";
                                         }
                                     }
 
@@ -394,27 +399,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         if (objt >= 8 && objt < 10) {
                                             var Tuesday0810 = document.getElementById('Tuesday0810');
                                             Tuesday0810.classList.add("blacked");
-                                            Tuesday0810.innerHTML = "Booked";
+                                            Tuesday0810.innerHTML = "BUSY";
                                         }
                                         if (objt >= 10 && objt < 12) {
                                             var Tuesday1012 = document.getElementById('Tuesday1012');
                                             Tuesday1012.classList.add("blacked");
-                                            Tuesday1012.innerHTML = "Booked";
+                                            Tuesday1012.innerHTML = "BUSY";
                                         }
                                         if (objt >= 12 && objt < 14) {
                                             var Tuesday1214 = document.getElementById('Tuesday1214');
                                             Tuesday1214.classList.add("blacked");
-                                            Tuesday1214.innerHTML = "Booked";
+                                            Tuesday1214.innerHTML = "BUSY";
                                         }
                                         if (objt >= 14 && objt < 16) {
                                             var Tuesday1416 = document.getElementById('Tuesday1416');
                                             Tuesday1416.classList.add("blacked");
-                                            Tuesday1416.innerHTML = "Booked";
+                                            Tuesday1416.innerHTML = "BUSY";
                                         }
                                         if (objt >= 16 && objt < 18) {
                                             var Tuesday1618 = document.getElementById('Tuesday1618');
                                             Tuesday1618.classList.add("blacked");
-                                            Tuesday1618.innerHTML = "Booked";
+                                            Tuesday1618.innerHTML = "BUSY";
                                         }
                                     }
 
@@ -422,27 +427,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         if (objt >= 8 && objt < 10) {
                                             var Wednesday0810 = document.getElementById('Wednesday0810');
                                             Wednesday0810.classList.add("blacked");
-                                            Wednesday0810.innerHTML = "Booked";
+                                            Wednesday0810.innerHTML = "BUSY";
                                         }
                                         if (objt >= 10 && objt < 12) {
                                             var Wednesday1012 = document.getElementById('Wednesday1012');
                                             Wednesday1012.classList.add("blacked");
-                                            Wednesday1012.innerHTML = "Booked";
+                                            Wednesday1012.innerHTML = "BUSY";
                                         }
                                         if (objt >= 12 && objt < 14) {
                                             var Wednesday1214 = document.getElementById('Wednesday1214');
                                             Wednesday1214.classList.add("blacked");
-                                            Wednesday1214.innerHTML = "Booked";
+                                            Wednesday1214.innerHTML = "BUSY";
                                         }
                                         if (objt >= 14 && objt < 16) {
                                             var Wednesday1416 = document.getElementById('Wednesday1416');
                                             Wednesday1416.classList.add("blacked");
-                                            Wednesday1416.innerHTML = "Booked";
+                                            Wednesday1416.innerHTML = "BUSY";
                                         }
                                         if (objt >= 16 && objt < 18) {
                                             var Wednesday1618 = document.getElementById('Wednesday1618');
                                             Wednesday1618.classList.add("blacked");
-                                            Wednesday1618.innerHTML = "Booked";
+                                            Wednesday1618.innerHTML = "BUSY";
                                         }
                                     }
 
@@ -450,27 +455,27 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         if (objt >= 8 && objt < 10) {
                                             var Thursday0810 = document.getElementById('Thursday0810');
                                             Thursday0810.classList.add("blacked");
-                                            Thursday0810.innerHTML = "Booked";
+                                            Thursday0810.innerHTML = "BUSY";
                                         }
                                         if (objt >= 10 && objt < 12) {
                                             var Thursday1012 = document.getElementById('Thursday1012');
                                             Thursday1012.classList.add("blacked");
-                                            Thursday1012.innerHTML = "Booked";
+                                            Thursday1012.innerHTML = "BUSY";
                                         }
                                         if (objt >= 12 && objt < 14) {
                                             var Thursday1214 = document.getElementById('Thursday1214');
                                             Thursday1214.classList.add("blacked");
-                                            Thursday1214.innerHTML = "Booked";
+                                            Thursday1214.innerHTML = "BUSY";
                                         }
                                         if (objt >= 14 && objt < 16) {
                                             var Thursday1416 = document.getElementById('Thursday1416');
                                             Thursday1416.classList.add("blacked");
-                                            Thursday1416.innerHTML = "Booked";
+                                            Thursday1416.innerHTML = "BUSY";
                                         }
                                         if (objt >= 16 && objt < 18) {
                                             var Thursday1618 = document.getElementById('Thursday1618');
                                             Thursday1618.classList.add("blacked");
-                                            Thursday1618.innerHTML = "Booked";
+                                            Thursday1618.innerHTML = "BUSY";
                                         }
                                     }
 
@@ -478,33 +483,192 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         if (objt >= 8 && objt < 10) {
                                             var Friday0810 = document.getElementById('Friday0810');
                                             Friday0810.classList.add("blacked");
-                                            Friday0810.innerHTML = "Booked";
+                                            Friday0810.innerHTML = "BUSY";
                                         }
                                         if (objt >= 10 && objt < 12) {
                                             var Friday1012 = document.getElementById('Friday1012');
                                             Friday1012.classList.add("blacked");
-                                            Friday1012.innerHTML = "Booked";
+                                            Friday1012.innerHTML = "BUSY";
                                         }
                                         if (objt >= 12 && objt < 14) {
                                             var Friday1214 = document.getElementById('Friday1214');
                                             Friday1214.classList.add("blacked");
-                                            Friday1214.innerHTML = "Booked";
+                                            Friday1214.innerHTML = "BUSY";
                                         }
                                         if (objt >= 14 && objt < 16) {
                                             var Friday1416 = document.getElementById('Friday1416');
                                             Friday1416.classList.add("blacked");
-                                            Friday1416.innerHTML = "Booked";
+                                            Friday1416.innerHTML = "BUSY";
                                         }
                                         if (objt >= 16 && objt < 18) {
                                             var Friday1618 = document.getElementById('Friday1618');
                                             Friday1618.classList.add("blacked");
-                                            Friday1618.innerHTML = "Booked";
+                                            Friday1618.innerHTML = "BUSY";
                                         }
                                     }
 
                                 }
                             }
                         });
+                        //start
+
+                            $.ajax({
+                                type: "POST",
+                                data: {
+                                    lecturer_name: php
+                                },
+                                url: "getClass.php",
+                                dataType: "json",
+                                success: function(data) {
+                                    var result = data;
+                                    for (var i = 0; i < result.length; i++) {
+                                        var obj = result[i];
+                                        var objt = parseInt(obj.time);
+
+                                        if (obj.Hari === "Monday") {
+                                            if (objt >= 8 && objt < 10) {
+                                                var Monday0810 = document.getElementById('Monday0810');
+                                                Monday0810.classList.add("classed");
+                                                Monday0810.innerHTML = "CLASS";
+                                            }
+                                            if (objt >= 10 && objt < 12) {
+                                                var Monday1012 = document.getElementById('Monday1012');
+                                                Monday1012.classList.add("classed");
+                                                Monday1012.innerHTML = "CLASS";
+                                            }
+                                            if (objt >= 12 && objt < 14) {
+                                                var Monday1214 = document.getElementById('Monday1214');
+                                                Monday1214.classList.add("classed");
+                                                Monday1214.innerHTML = "CLASS";
+                                            }
+                                            if (objt >= 14 && objt < 16) {
+                                                var Monday1416 = document.getElementById('Monday1416');
+                                                Monday1416.classList.add("classed");
+                                                Monday1416.innerHTML = "CLASS";
+                                            }
+                                            if (objt >= 16 && objt < 18) {
+                                                var Monday1618 = document.getElementById('Monday1618');
+                                                Monday1618.classList.add("classed");
+                                                Monday1618.innerHTML = "CLASS";
+                                            }
+                                        }
+
+                                        if (obj.Hari === "Tuesday") {
+                                            if (objt >= 8 && objt < 10) {
+                                                var Tuesday0810 = document.getElementById('Tuesday0810');
+                                                Tuesday0810.classList.add("classed");
+                                                Tuesday0810.innerHTML = "CLASS";
+                                            }
+                                            if (objt >= 10 && objt < 12) {
+                                                var Tuesday1012 = document.getElementById('Tuesday1012');
+                                                Tuesday1012.classList.add("classed");
+                                                Tuesday1012.innerHTML = "CLASS";
+                                            }
+                                            if (objt >= 12 && objt < 14) {
+                                                var Tuesday1214 = document.getElementById('Tuesday1214');
+                                                Tuesday1214.classList.add("classed");
+                                                Tuesday1214.innerHTML = "CLASS";
+                                            }
+                                            if (objt >= 14 && objt < 16) {
+                                                var Tuesday1416 = document.getElementById('Tuesday1416');
+                                                Tuesday1416.classList.add("classed");
+                                                Tuesday1416.innerHTML = "CLASS";
+                                            }
+                                            if (objt >= 16 && objt < 18) {
+                                                var Tuesday1618 = document.getElementById('Tuesday1618');
+                                                Tuesday1618.classList.add("classed");
+                                                Tuesday1618.innerHTML = "CLASS";
+                                            }
+                                        }
+
+                                        if (obj.Hari === "Wednesday") {
+                                            if (objt >= 8 && objt < 10) {
+                                                var Wednesday0810 = document.getElementById('Wednesday0810');
+                                                Wednesday0810.classList.add("classed");
+                                                Wednesday0810.innerHTML = "CLASS";
+                                            }
+                                            if (objt >= 10 && objt < 12) {
+                                                var Wednesday1012 = document.getElementById('Wednesday1012');
+                                                Wednesday1012.classList.add("classed");
+                                                Wednesday1012.innerHTML = "CLASS";
+                                            }
+                                            if (objt >= 12 && objt < 14) {
+                                                var Wednesday1214 = document.getElementById('Wednesday1214');
+                                                Wednesday1214.classList.add("classed");
+                                                Wednesday1214.innerHTML = "CLASS";
+                                            }
+                                            if (objt >= 14 && objt < 16) {
+                                                var Wednesday1416 = document.getElementById('Wednesday1416');
+                                                Wednesday1416.classList.add("classed");
+                                                Wednesday1416.innerHTML = "CLASS";
+                                            }
+                                            if (objt >= 16 && objt < 18) {
+                                                var Wednesday1618 = document.getElementById('Wednesday1618');
+                                                Wednesday1618.classList.add("classed");
+                                                Wednesday1618.innerHTML = "CLASS";
+                                            }
+                                        }
+
+                                        if (obj.Hari === "Thursday") {
+                                            if (objt >= 8 && objt < 10) {
+                                                var Thursday0810 = document.getElementById('Thursday0810');
+                                                Thursday0810.classList.add("classed");
+                                                Thursday0810.innerHTML = "CLASS";
+                                            }
+                                            if (objt >= 10 && objt < 12) {
+                                                var Thursday1012 = document.getElementById('Thursday1012');
+                                                Thursday1012.classList.add("classed");
+                                                Thursday1012.innerHTML = "CLASS";
+                                            }
+                                            if (objt >= 12 && objt < 14) {
+                                                var Thursday1214 = document.getElementById('Thursday1214');
+                                                Thursday1214.classList.add("classed");
+                                                Thursday1214.innerHTML = "CLASS";
+                                            }
+                                            if (objt >= 14 && objt < 16) {
+                                                var Thursday1416 = document.getElementById('Thursday1416');
+                                                Thursday1416.classList.add("classed");
+                                                Thursday1416.innerHTML = "CLASS";
+                                            }
+                                            if (objt >= 16 && objt < 18) {
+                                                var Thursday1618 = document.getElementById('Thursday1618');
+                                                Thursday1618.classList.add("classed");
+                                                Thursday1618.innerHTML = "CLASS";
+                                            }
+                                        }
+
+                                        if (obj.Hari === "Friday") {
+                                            if (objt >= 8 && objt < 10) {
+                                                var Friday0810 = document.getElementById('Friday0810');
+                                                Friday0810.classList.add("classed");
+                                                Friday0810.innerHTML = "CLASS";
+                                            }
+                                            if (objt >= 10 && objt < 12) {
+                                                var Friday1012 = document.getElementById('Friday1012');
+                                                Friday1012.classList.add("classed");
+                                                Friday1012.innerHTML = "CLASS";
+                                            }
+                                            if (objt >= 12 && objt < 14) {
+                                                var Friday1214 = document.getElementById('Friday1214');
+                                                Friday1214.classList.add("classed");
+                                                Friday1214.innerHTML = "CLASS";
+                                            }
+                                            if (objt >= 14 && objt < 16) {
+                                                var Friday1416 = document.getElementById('Friday1416');
+                                                Friday1416.classList.add("classed");
+                                                Friday1416.innerHTML = "CLASS";
+                                            }
+                                            if (objt >= 16 && objt < 18) {
+                                                var Friday1618 = document.getElementById('Friday1618');
+                                                Friday1618.classList.add("classed");
+                                                Friday1618.innerHTML = "CLASS";
+                                            }
+                                        }
+
+                                    }
+                                }
+                            });
+                        //end
                     } else {
                         // alert("Select lecturer to book");
                     }
@@ -607,12 +771,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             subject: $subject,
                             tarikh: $tarikh,
                             waktu: $waktu
-                        },
-                        success: function(response) {
-                            console.log(response);
                         }
+                    }).done(function(msg) {
+                      myFunction();
                     });
                 });
+
+            function myFunction() {
+                alert('Data successfully inserted, please wait for approval from lecturer');
+                setTimeout(function(){ location.replace("viewStatus.php"); }, 1000);
+            }
             </script>
 
     </body>

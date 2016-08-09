@@ -5,14 +5,14 @@
 
 	} else {
 
-		$lecturer_name = $_POST["lecturer_name"];
-		$id_pelajar = $_POST["id_pelajar"];
 		$desc = $_POST["desc"];
 		$subject = $_POST["subject"];
 		$waktu = $_POST["waktu"];
-		$tarikh = $_POST['tarikh'];
+		// $tarikh = $_POST['tarikh'];
+		$hari = $_POST['hari'];
+		$lecturer_name = $_POST['lecturer_name'];
 
-		$nextDate =  date('Y-m-d', strtotime($tarikh));
+		// $nextDate =  date('Y-m-d', strtotime($tarikh));
 
 		// Create a new DateTime object
 		// $date = new DateTime();
@@ -33,8 +33,8 @@
 		// query
 
 			$sql = "INSERT INTO booking
-			(book_id, subject, description, date, time, username, lecturer, status)
-			VALUES ( '' , '$subject' , '$desc' , '$nextDate' , '$waktu' , '$id_pelajar' , '$lecturer_name' , 'Pending')";
+			(book_id, subject, description, time, username, lecturer, status, classDay)
+			VALUES ( '' , '$subject' , '$desc' , '$waktu' , '$id_pelajar' , '$lecturer_name' , 'Class', '$hari')";
 			$results = $conn->query($sql);
 
 		// result

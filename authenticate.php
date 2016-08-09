@@ -1,11 +1,11 @@
-<?php 
+<?php
 	require 'Connections/slas.php';
 
 	session_start();
 
 	$username = "";
 	$password = "";
-	
+
 	if(isset($_POST['username'])){
 		$username = $_POST['username'];
 	}
@@ -13,7 +13,7 @@
 		$password = $_POST['password'];
 
 	}
-	
+
 	echo $username ." : ".$password;
 
 	$q = 'SELECT * FROM login WHERE username=:username AND password=:password';
@@ -25,7 +25,7 @@
 
 	if($query->rowCount() == 0){
 		echo '<script type="text/javascript"> window.location = "index.php";window.alert("Login failed.");</script>';
-		
+
 	}else{
 
 		$row = $query->fetch(PDO::FETCH_ASSOC);
@@ -33,7 +33,8 @@
 		session_regenerate_id();
 		$_SESSION['sess_user_id'] = $row['log_id'];
 		$_SESSION['MM_Username'] = $row['username'];
-        $_SESSION['MM_UserGroup'] = $row['type'];
+    $_SESSION['MM_UserGroup'] = $row['type'];
+    $_SESSION['name'] = $row['name'];
 
         echo $_SESSION['MM_UserGroup'];
 		session_write_close();
@@ -45,8 +46,8 @@
 		}else{
 			header('Location: student.php');
 		}
-		
-		
+
+
 	}
 
 
